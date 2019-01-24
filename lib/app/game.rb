@@ -6,6 +6,7 @@ class Game
     attr_accessor :current_player, :status 
 
       def initialize
+        array = []
       #TO DO : créé 2 joueurs, créé un board, met le status à "on going", défini un current_player
         puts "C'est quoi ton blaze, player 1 ?"
         print "> "
@@ -13,7 +14,6 @@ class Game
         puts "C'est quoi ton blaze, player 2 ?"
         print "> "
         player_2 = Player.new(gets.chomp, "O")
-        array = []
         array << player_1
         array << player_2
         Board.new
